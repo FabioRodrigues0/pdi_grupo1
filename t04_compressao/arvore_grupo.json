@@ -1,0 +1,128 @@
+{
+  "tipo": "no",
+  "peso": 31,
+  "filhos": [
+    {
+      "ramo": "0",
+      "no": {
+        "tipo": "no",
+        "peso": 13,
+        "filhos": [
+          {
+            "ramo": "0",
+            "no": {
+              "tipo": "no",
+              "peso": 5,
+              "filhos": [
+                {
+                  "ramo": "0",
+                  "no": {
+                    "tipo": "no",
+                    "peso": 2,
+                    "filhos": [
+                      {"ramo": "0", "folha": {"simbolo": "P", "codigo": "0000", "frequencia": 1}},
+                      {"ramo": "1", "folha": {"simbolo": "S", "codigo": "0001", "frequencia": 1}}
+                    ]
+                  }
+                },
+                {
+                  "ramo": "1",
+                  "no": {
+                    "tipo": "no",
+                    "peso": 3,
+                    "filhos": [
+                      {"ramo": "0", "folha": {"simbolo": "Y", "codigo": "0010", "frequencia": 1}},
+                      {"ramo": "1", "folha": {"simbolo": "B", "codigo": "0011", "frequencia": 2}}
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ramo": "1",
+            "no": {
+              "tipo": "no",
+              "peso": 8,
+              "filhos": [
+                {"ramo": "0", "folha": {"simbolo": "_", "codigo": "010", "frequencia": 4}},
+                {
+                  "ramo": "1",
+                  "no": {
+                    "tipo": "no",
+                    "peso": 4,
+                    "filhos": [
+                      {"ramo": "0", "folha": {"simbolo": "D", "codigo": "0110", "frequencia": 2}},
+                      {"ramo": "1", "folha": {"simbolo": "G", "codigo": "0111", "frequencia": 2}}
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ramo": "1",
+      "no": {
+        "tipo": "no",
+        "peso": 18,
+        "filhos": [
+          {
+            "ramo": "0",
+            "no": {
+              "tipo": "no",
+              "peso": 8,
+              "filhos": [
+                {
+                  "ramo": "0",
+                  "no": {
+                    "tipo": "no",
+                    "peso": 4,
+                    "filhos": [
+                      {"ramo": "0", "folha": {"simbolo": "L", "codigo": "1000", "frequencia": 2}},
+                      {"ramo": "1", "folha": {"simbolo": "O", "codigo": "1001", "frequencia": 2}}
+                    ]
+                  }
+                },
+                {
+                  "ramo": "1",
+                  "no": {
+                    "tipo": "no",
+                    "peso": 4,
+                    "filhos": [
+                      {"ramo": "0", "folha": {"simbolo": "T", "codigo": "1010", "frequencia": 2}},
+                      {
+                        "ramo": "1",
+                        "no": {
+                          "tipo": "no",
+                          "peso": 2,
+                          "filhos": [
+                            {"ramo": "0", "folha": {"simbolo": "C", "codigo": "10110", "frequencia": 1}},
+                            {"ramo": "1", "folha": {"simbolo": "E", "codigo": "10111", "frequencia": 1}}
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ramo": "1",
+            "no": {
+              "tipo": "no",
+              "peso": 10,
+              "filhos": [
+                {"ramo": "0", "folha": {"simbolo": "A", "codigo": "110", "frequencia": 5}},
+                {"ramo": "1", "folha": {"simbolo": "I", "codigo": "111", "frequencia": 5}}
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

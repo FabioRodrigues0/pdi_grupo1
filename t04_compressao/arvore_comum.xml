@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arvoreHuffman>
+  <no peso="31">
+    <ramo valor="0">
+      <no peso="13">
+        <ramo valor="0">
+          <no peso="5">
+            <ramo valor="0">
+              <no peso="2">
+                <ramo valor="0">
+                  <folha simbolo="P" codigo="0000" frequencia="1"/>
+                </ramo>
+                <ramo valor="1">
+                  <folha simbolo="S" codigo="0001" frequencia="1"/>
+                </ramo>
+              </no>
+            </ramo>
+            <ramo valor="1">
+              <no peso="3">
+                <ramo valor="0">
+                  <folha simbolo="Y" codigo="0010" frequencia="1"/>
+                </ramo>
+                <ramo valor="1">
+                  <folha simbolo="B" codigo="0011" frequencia="2"/>
+                </ramo>
+              </no>
+            </ramo>
+          </no>
+        </ramo>
+        <ramo valor="1">
+          <no peso="8">
+            <ramo valor="0">
+              <folha simbolo="_" codigo="010" frequencia="4"/>
+            </ramo>
+            <ramo valor="1">
+              <no peso="4">
+                <ramo valor="0">
+                  <folha simbolo="D" codigo="0110" frequencia="2"/>
+                </ramo>
+                <ramo valor="1">
+                  <folha simbolo="G" codigo="0111" frequencia="2"/>
+                </ramo>
+              </no>
+            </ramo>
+          </no>
+        </ramo>
+      </no>
+    </ramo>
+    <ramo valor="1">
+      <no peso="18">
+        <ramo valor="0">
+          <no peso="8">
+            <ramo valor="0">
+              <no peso="4">
+                <ramo valor="0">
+                  <folha simbolo="L" codigo="1000" frequencia="2"/>
+                </ramo>
+                <ramo valor="1">
+                  <folha simbolo="O" codigo="1001" frequencia="2"/>
+                </ramo>
+              </no>
+            </ramo>
+            <ramo valor="1">
+              <no peso="4">
+                <ramo valor="0">
+                  <folha simbolo="T" codigo="1010" frequencia="2"/>
+                </ramo>
+                <ramo valor="1">
+                  <no peso="2">
+                    <ramo valor="0">
+                      <folha simbolo="C" codigo="10110" frequencia="1"/>
+                    </ramo>
+                    <ramo valor="1">
+                      <folha simbolo="E" codigo="10111" frequencia="1"/>
+                    </ramo>
+                  </no>
+                </ramo>
+              </no>
+            </ramo>
+          </no>
+        </ramo>
+        <ramo valor="1">
+          <no peso="10">
+            <ramo valor="0">
+              <folha simbolo="A" codigo="110" frequencia="5"/>
+            </ramo>
+            <ramo valor="1">
+              <folha simbolo="I" codigo="111" frequencia="5"/>
+            </ramo>
+          </no>
+        </ramo>
+      </no>
+    </ramo>
+  </no>
+</arvoreHuffman>
