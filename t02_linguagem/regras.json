@@ -1,0 +1,182 @@
+{
+  "regras": {
+    "regra": [
+      {
+        "@id": "R1",
+        "@perfil": "estudante",
+        "condicao": [
+          {
+            "@campo": "tipo_documento",
+            "@operador": "=",
+            "@valor": "livro"
+          },
+          {
+            "@campo": "n_emprestimos_ativos",
+            "@operador": "<",
+            "@valor": "5",
+            "@unidade": "documentos"
+          }
+        ],
+        "prazo": {
+          "@valor": "15",
+          "@unidade": "dias_corridos"
+        }
+      },
+      {
+        "@id": "R2",
+        "@perfil": "docente",
+        "condicao": [
+          {
+            "@campo": "categoria",
+            "@operador": "=",
+            "@valor": "geral"
+          },
+          {
+            "@campo": "tipo_documento",
+            "@operador": "=",
+            "@valor": "livro"
+          },
+          {
+            "@campo": "n_emprestimos_ativos",
+            "@operador": "<",
+            "@valor": "5",
+            "@unidade": "documentos"
+          }
+        ],
+        "prazo": {
+          "@valor": "60",
+          "@unidade": "dias_corridos"
+        },
+        "multa": {
+          "@aplica": "nao"
+        },
+        "excecao": {
+          "condicao": [
+            {
+              "@campo": "categoria",
+              "@operador": "=",
+              "@valor": "reserva"
+            },
+            {
+              "@campo": "tipo_documento",
+              "@operador": "=",
+              "@valor": "livro"
+            },
+            {
+              "@campo": "n_emprestimos_ativos",
+              "@operador": "<",
+              "@valor": "5",
+              "@unidade": "documentos"
+            },
+            {
+              "@campo": "n_emprestimos_reserva_ativos",
+              "@operador": "<",
+              "@valor": "3",
+              "@unidade": "documentos"
+            }
+          ],
+          "prazo": {
+            "@valor": "3",
+            "@unidade": "dias_corridos"
+          },
+          "multa": {
+            "@aplica": "sim"
+          }
+        }
+      },
+      {
+        "@id": "R3",
+        "condicao": [
+          {
+            "@campo": "perfil",
+            "@operador": "=",
+            "@valor": "estudante"
+          },
+          {
+            "@campo": "categoria",
+            "@operador": "em",
+            "@valor": "geral reserva"
+          },
+          {
+            "@campo": "dias_atraso",
+            "@operador": ">=",
+            "@valor": "3",
+            "@unidade": "dias_corridos"
+          }
+        ],
+        "multa": {
+          "@aplica": "sim",
+          "@valor": "0.50",
+          "@unidade": "EUR_por_dia",
+          "@dias_cobrados": "dias_atraso - 2"
+        },
+        "excecao": {
+          "condicao": [
+            {
+              "@campo": "perfil",
+              "@operador": "=",
+              "@valor": "docente"
+            },
+            {
+              "@campo": "categoria",
+              "@operador": "=",
+              "@valor": "reserva"
+            },
+            {
+              "@campo": "dias_atraso",
+              "@operador": ">=",
+              "@valor": "3",
+              "@unidade": "dias_corridos"
+            }
+          ],
+          "multa": {
+            "@aplica": "sim",
+            "@valor": "0.50",
+            "@unidade": "EUR_por_dia",
+            "@dias_cobrados": "dias_atraso - 2"
+          }
+        },
+        "limite_anual": {
+          "@campo": "total_multas_ano",
+          "@operador": ">=",
+          "@valor": "100",
+          "@unidade": "EUR",
+          "@consequencia": "bloquear_requisicoes_ate_fim_ano_letivo"
+        }
+      },
+      {
+        "@id": "R4",
+        "condicao": [
+          {
+            "@campo": "perfil",
+            "@operador": "em",
+            "@valor": "docente estudante"
+          },
+          {
+            "@campo": "autorizado",
+            "@operador": "=",
+            "@valor": "verdadeiro"
+          },
+          {
+            "@campo": "categoria",
+            "@operador": "=",
+            "@valor": "rara"
+          },
+          {
+            "@campo": "tipo_documento",
+            "@operador": "em",
+            "@valor": "livro manuscrito"
+          },
+          {
+            "@campo": "local",
+            "@operador": "=",
+            "@valor": "sala_de_leitura"
+          }
+        ],
+        "requisicao": {
+          "@permitida": "nao"
+        }
+      }
+    ]
+  }
+}

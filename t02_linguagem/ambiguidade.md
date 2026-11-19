@@ -228,7 +228,7 @@ recusar ("apenas os estudantes podem requisitar livros")
 |Pagam multas de atraso?|Sim, mas apenas obras de reversa nas restantes não|
 |O que são obras de Reversa?| Obras que pertecem  as Bibliográfias das UC dos cursos da faculdade, enquanto constarem dessas bibliografias|
 |Como se distingue obras de reserva das restantes?|Tem que incluir na categoria, "reserva" (bliografia UC) ou "geral" (todas as outras)
-|Que tipo de documento entram nas obras de reserva?| Livros, Relaótios e DVDs|
+|Que tipo de documento entram nas obras de reserva?| Apenas Livros|
 |Quantas obras de reserva podem ser requisitadas?| <= 3, incluidas no limite de 5|
 |Quantos dias podem requisistar obras de reserva?| 3 dias corridos|
 | O "exceto" aplica-se só às multas ou também aos prazos maiores? | Às duas: nas obras de reserva, os docentes têm o prazo de 3 dias e pagam multa, tal como os estudantes |
@@ -243,14 +243,14 @@ SE perfil="docente" ENTÃO
         SENÃO
             recusar ("limite de 5 obras atingidas")
     
-    SENÃO SE categoria="reserva" E tipo_documento= {"livro","relatório","dvd"} ENTÃO
+    SENÃO SE categoria="reserva" E tipo_documento=livro ENTÃO
         SE n_emprestimos_ativos <5 ENTÃO
             SE n_emprestimos_reserva_ativos <3 ENTÃO
                 permitir requisição;
                 Defenir prazo de 3 dias corridos;
                 Multa aplicavél;
             SENÃO
-                recusar("limite de 3 obras da categoria reserva atingido")
+                recusar("limite de 3 livros da categoria reserva atingido")
         SENÃO
             recusar("limite de 5 obras atingido")
     SENÃO
@@ -293,7 +293,7 @@ SE total_multas_ao >=100€ ENTÃO
 | Ambiguidade | Decisão |
 | :-------: | :-----: |
 | O que são obras raras? | Obras com mais de 100 anos ou com um único exemplar |
-| Que tipo de documentos? | Livros e manuscritos |
+| Que tipo de documentos? | Livros|
 | O "só" aplica-se ao local ou aos utilizadores? | Aos dois |
 | Podem ser requisitadas? | Não, apenas consulta na sala de leitura |
 | Quem são os utilizadores autorizados? | Docentes e estudantes com autorização do bibliotecário |
